@@ -1,0 +1,21 @@
+{
+  "type" : "object",
+  "properties" : {
+    "ArticleNo" : {
+      "type" : "string"
+    },
+    "LotNo" : {
+      "type" : "string"
+    },
+    "OrderNo" : {
+      "type" : "string"
+    },
+    "SpecialStockIndicator" : {
+      "type" : "string"
+    },
+    "SpecialStockNo" : {
+      "type" : "string"
+    }
+  },
+  "additionalProperties" : false
+}

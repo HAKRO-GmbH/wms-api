@@ -1,0 +1,36 @@
+{
+  "$defs" : {
+    "WmsOutgoingGoodsMovementType" : {
+      "type" : "string",
+      "enum" : [ "Planned", "Unplanned" ]
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "ActualQty" : {
+      "type" : "integer"
+    },
+    "ArticleNo" : {
+      "type" : "string"
+    },
+    "LotNo" : {
+      "type" : "string"
+    },
+    "MovementType" : {
+      "$ref" : "#/$defs/WmsOutgoingGoodsMovementType"
+    },
+    "OutgoingGoodsNo" : {
+      "type" : "string"
+    },
+    "PositionNo" : {
+      "type" : "string"
+    },
+    "SpecialStockIndicator" : {
+      "type" : "string"
+    },
+    "SpecialStockNo" : {
+      "type" : "string"
+    }
+  },
+  "additionalProperties" : false
+}

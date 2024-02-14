@@ -1,0 +1,9 @@
+{
+  "type" : "object",
+  "properties" : {
+    "OutgoingGoodsNo" : {
+      "type" : "string"
+    }
+  },
+  "additionalProperties" : false
+}

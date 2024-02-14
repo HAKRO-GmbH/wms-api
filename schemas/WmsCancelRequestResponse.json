@@ -1,0 +1,12 @@
+{
+  "type" : "object",
+  "properties" : {
+    "IsCancelled" : {
+      "type" : "boolean"
+    },
+    "OutgoingGoodsNo" : {
+      "type" : "string"
+    }
+  },
+  "additionalProperties" : false
+}

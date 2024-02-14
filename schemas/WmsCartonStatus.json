@@ -1,0 +1,52 @@
+{
+  "$defs" : {
+    "WmsCartonType" : {
+      "type" : "string",
+      "enum" : [ "1", "2" ]
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "ArticleNo" : {
+      "type" : "string"
+    },
+    "CartonNo" : {
+      "type" : "string"
+    },
+    "CartonType" : {
+      "$ref" : "#/$defs/WmsCartonType"
+    },
+    "ErrorText" : {
+      "type" : "string"
+    },
+    "EventTime" : {
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "Location" : {
+      "type" : "string"
+    },
+    "LotNo" : {
+      "type" : "string"
+    },
+    "MaterialLocked" : {
+      "type" : "boolean"
+    },
+    "OrderNo" : {
+      "type" : "string"
+    },
+    "PalNo" : {
+      "type" : "string"
+    },
+    "Quantity" : {
+      "type" : "integer"
+    },
+    "SpecialStockIndicator" : {
+      "type" : "string"
+    },
+    "SpecialStockNo" : {
+      "type" : "string"
+    }
+  },
+  "additionalProperties" : false
+}

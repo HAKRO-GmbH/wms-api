@@ -1,0 +1,42 @@
+{
+  "$defs" : {
+    "WmsQuantityCorrectionMovementType" : {
+      "type" : "string",
+      "enum" : [ "Mengenkorrektur", "Inventurbuchung" ]
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "ArticleNo" : {
+      "type" : "string"
+    },
+    "CartonNo" : {
+      "type" : "string"
+    },
+    "CorrectionQty" : {
+      "type" : "integer"
+    },
+    "LotNo" : {
+      "type" : "string"
+    },
+    "MovementType" : {
+      "$ref" : "#/$defs/WmsQuantityCorrectionMovementType"
+    },
+    "OrderNo" : {
+      "type" : "string"
+    },
+    "PalNo" : {
+      "type" : "string"
+    },
+    "SpecialStockIndicator" : {
+      "type" : "string"
+    },
+    "SpecialStockNo" : {
+      "type" : "string"
+    },
+    "StorageArea" : {
+      "type" : "string"
+    }
+  },
+  "additionalProperties" : false
+}

@@ -1,0 +1,90 @@
+{
+  "$defs" : {
+    "WmsIncomingGoodsMovementType" : {
+      "type" : "string",
+      "enum" : [ "IncomingPlanned", "IncomingUnplanned" ]
+    },
+    "WmsIncomingGoodsPosition" : {
+      "type" : "object",
+      "properties" : {
+        "ArticleNo" : {
+          "type" : "string"
+        },
+        "LotNo" : {
+          "type" : "string"
+        },
+        "OrderNo" : {
+          "type" : "string"
+        },
+        "PositionNo" : {
+          "type" : "string"
+        },
+        "SampleRequired" : {
+          "type" : "boolean"
+        },
+        "SortColor" : {
+          "type" : "boolean"
+        },
+        "SortModel" : {
+          "type" : "boolean"
+        },
+        "SortOrderNo" : {
+          "type" : "boolean"
+        },
+        "SortSize" : {
+          "type" : "boolean"
+        },
+        "SpecialStockIndicator" : {
+          "type" : "string"
+        },
+        "SpecialStockNo" : {
+          "type" : "string"
+        },
+        "StorageArea" : {
+          "type" : "string"
+        },
+        "TargetQty" : {
+          "type" : "integer"
+        }
+      },
+      "additionalProperties" : false
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "HasPositions" : {
+      "type" : "boolean"
+    },
+    "IncomingGoodsNo" : {
+      "type" : "string"
+    },
+    "MovementType" : {
+      "$ref" : "#/$defs/WmsIncomingGoodsMovementType"
+    },
+    "Positions" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/$defs/WmsIncomingGoodsPosition"
+      }
+    },
+    "SampleRequired" : {
+      "type" : "boolean"
+    },
+    "SortColor" : {
+      "type" : "boolean"
+    },
+    "SortModel" : {
+      "type" : "boolean"
+    },
+    "SortOrderNo" : {
+      "type" : "boolean"
+    },
+    "SortSize" : {
+      "type" : "boolean"
+    },
+    "StorageArea" : {
+      "type" : "string"
+    }
+  },
+  "additionalProperties" : false
+}

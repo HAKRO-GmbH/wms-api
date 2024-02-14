@@ -1,0 +1,67 @@
+{
+  "$defs" : {
+    "WmsDispositionType" : {
+      "type" : "string",
+      "enum" : [ "Manual", "Automatic" ]
+    },
+    "WmsOutgoingGoodsPosition" : {
+      "type" : "object",
+      "properties" : {
+        "ArticleNo" : {
+          "type" : "string"
+        },
+        "ExactQty" : {
+          "type" : "boolean"
+        },
+        "LotNo" : {
+          "type" : "string"
+        },
+        "OrderNo" : {
+          "type" : "string"
+        },
+        "OutgoingGoodsNo" : {
+          "type" : "string"
+        },
+        "PositionNo" : {
+          "type" : "string"
+        },
+        "SpecialStockIndicator" : {
+          "type" : "string"
+        },
+        "SpecialStockNo" : {
+          "type" : "string"
+        },
+        "TargetQty" : {
+          "type" : "integer"
+        }
+      },
+      "additionalProperties" : false
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "DispositionType" : {
+      "$ref" : "#/$defs/WmsDispositionType"
+    },
+    "Location" : {
+      "type" : "string"
+    },
+    "OutgoingGoodsNo" : {
+      "type" : "string"
+    },
+    "OutgoingGoodsPositions" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/$defs/WmsOutgoingGoodsPosition"
+      }
+    },
+    "Priority" : {
+      "type" : "integer"
+    },
+    "PriorityDate" : {
+      "type" : "string",
+      "format" : "date-time"
+    }
+  },
+  "additionalProperties" : false
+}

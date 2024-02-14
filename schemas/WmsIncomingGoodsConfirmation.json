@@ -1,0 +1,43 @@
+{
+  "$defs" : {
+    "WmsIncomingGoodsMovementType" : {
+      "type" : "string",
+      "enum" : [ "IncomingPlanned", "IncomingUnplanned" ]
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "ActualQty" : {
+      "type" : "integer"
+    },
+    "ArticleNo" : {
+      "type" : "string"
+    },
+    "FiFo" : {
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "IncomingGoodsNo" : {
+      "type" : "string"
+    },
+    "LotNo" : {
+      "type" : "string"
+    },
+    "MovementType" : {
+      "$ref" : "#/$defs/WmsIncomingGoodsMovementType"
+    },
+    "OrderNo" : {
+      "type" : "string"
+    },
+    "PositionNo" : {
+      "type" : "string"
+    },
+    "SpecialStockIndicator" : {
+      "type" : "string"
+    },
+    "SpecialStockNo" : {
+      "type" : "string"
+    }
+  },
+  "additionalProperties" : false
+}

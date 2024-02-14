@@ -1,0 +1,9 @@
+{
+  "type" : "object",
+  "properties" : {
+    "ArticleNo" : {
+      "type" : "string"
+    }
+  },
+  "additionalProperties" : false
+}

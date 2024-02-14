@@ -1,0 +1,36 @@
+{
+  "$defs" : {
+    "WmsLabelType" : {
+      "type" : "string",
+      "enum" : [ "TransportCarton", "TransportPallet", "CartonLabel", "QsLabel", "ConsumableLabel" ]
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "ArticleNo" : {
+      "type" : "string"
+    },
+    "CartonNo" : {
+      "type" : "string"
+    },
+    "LabelQty" : {
+      "type" : "integer"
+    },
+    "LabelType" : {
+      "$ref" : "#/$defs/WmsLabelType"
+    },
+    "OrderNo" : {
+      "type" : "string"
+    },
+    "PalNo" : {
+      "type" : "string"
+    },
+    "Printer" : {
+      "type" : "string"
+    },
+    "Quantity" : {
+      "type" : "integer"
+    }
+  },
+  "additionalProperties" : false
+}

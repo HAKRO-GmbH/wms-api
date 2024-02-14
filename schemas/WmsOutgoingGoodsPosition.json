@@ -1,0 +1,33 @@
+{
+  "type" : "object",
+  "properties" : {
+    "ArticleNo" : {
+      "type" : "string"
+    },
+    "ExactQty" : {
+      "type" : "boolean"
+    },
+    "LotNo" : {
+      "type" : "string"
+    },
+    "OrderNo" : {
+      "type" : "string"
+    },
+    "OutgoingGoodsNo" : {
+      "type" : "string"
+    },
+    "PositionNo" : {
+      "type" : "string"
+    },
+    "SpecialStockIndicator" : {
+      "type" : "string"
+    },
+    "SpecialStockNo" : {
+      "type" : "string"
+    },
+    "TargetQty" : {
+      "type" : "integer"
+    }
+  },
+  "additionalProperties" : false
+}

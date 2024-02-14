@@ -1,0 +1,15 @@
+{
+  "type" : "object",
+  "properties" : {
+    "ArticleNo" : {
+      "type" : "string"
+    },
+    "Location" : {
+      "type" : "string"
+    },
+    "Quantity" : {
+      "type" : "integer"
+    }
+  },
+  "additionalProperties" : false
+}

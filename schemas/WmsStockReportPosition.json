@@ -1,0 +1,36 @@
+{
+  "type" : "object",
+  "properties" : {
+    "ArticleNo" : {
+      "type" : "string"
+    },
+    "AvailableQuantity" : {
+      "type" : "integer"
+    },
+    "DisposedQuantity" : {
+      "type" : "integer"
+    },
+    "IncomingGoodsNo" : {
+      "type" : "string"
+    },
+    "LockedQuantity" : {
+      "type" : "integer"
+    },
+    "LotNo" : {
+      "type" : "string"
+    },
+    "OrderNo" : {
+      "type" : "string"
+    },
+    "SpecialStockIndicator" : {
+      "type" : "string"
+    },
+    "SpecialStockNo" : {
+      "type" : "string"
+    },
+    "StorageArea" : {
+      "type" : "string"
+    }
+  },
+  "additionalProperties" : false
+}

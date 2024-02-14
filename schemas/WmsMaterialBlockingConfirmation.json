@@ -1,0 +1,24 @@
+{
+  "type" : "object",
+  "properties" : {
+    "ArticleNo" : {
+      "type" : "string"
+    },
+    "IsBlocked" : {
+      "type" : "boolean"
+    },
+    "LotNo" : {
+      "type" : "string"
+    },
+    "OrderNo" : {
+      "type" : "string"
+    },
+    "SpecialStockIndicator" : {
+      "type" : "string"
+    },
+    "SpecialStockNo" : {
+      "type" : "string"
+    }
+  },
+  "additionalProperties" : false
+}

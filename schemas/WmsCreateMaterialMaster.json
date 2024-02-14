@@ -1,0 +1,39 @@
+{
+  "type" : "object",
+  "properties" : {
+    "AbcArea" : {
+      "type" : "string"
+    },
+    "ArticleNo" : {
+      "type" : "string"
+    },
+    "Color" : {
+      "type" : "string"
+    },
+    "Description" : {
+      "type" : "string"
+    },
+    "ImageFileNameArticle" : {
+      "type" : "string"
+    },
+    "IsLotNoRequired" : {
+      "type" : "boolean"
+    },
+    "IsManualSorting" : {
+      "type" : "boolean"
+    },
+    "Model" : {
+      "type" : "string"
+    },
+    "PreferredStorageArea" : {
+      "type" : "string"
+    },
+    "Size" : {
+      "type" : "string"
+    },
+    "Weight" : {
+      "type" : "integer"
+    }
+  },
+  "additionalProperties" : false
+}
