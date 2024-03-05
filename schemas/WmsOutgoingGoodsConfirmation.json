@@ -2,7 +2,7 @@
   "$defs" : {
     "WmsOutgoingGoodsMovementType" : {
       "type" : "string",
-      "enum" : [ "Planned", "Unplanned" ]
+      "enum" : [ "OutgoingPlanned", "OutgoingUnplanned" ]
     }
   },
   "type" : "object",

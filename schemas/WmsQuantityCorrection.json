@@ -2,7 +2,7 @@
   "$defs" : {
     "WmsQuantityCorrectionMovementType" : {
       "type" : "string",
-      "enum" : [ "Mengenkorrektur", "Inventurbuchung" ]
+      "enum" : [ "QuantityCorrection", "Stocktaking" ]
     }
   },
   "type" : "object",

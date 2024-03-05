@@ -25,10 +25,10 @@ paths:
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
         "401":
           description: Not Authorized
+        "403":
+          description: Not Allowed
       security:
       - Keycloak: []
   /wms/carton-status:
@@ -45,10 +45,10 @@ paths:
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
         "401":
           description: Not Authorized
+        "403":
+          description: Not Allowed
       security:
       - Keycloak: []
   /wms/incoming-goods/confirmation:
@@ -65,10 +65,10 @@ paths:
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
         "401":
           description: Not Authorized
+        "403":
+          description: Not Allowed
       security:
       - Keycloak: []
   /wms/material/blocking-confirmation:
@@ -85,10 +85,10 @@ paths:
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
         "401":
           description: Not Authorized
+        "403":
+          description: Not Allowed
       security:
       - Keycloak: []
   /wms/material/unblocking-confirmation:
@@ -105,10 +105,10 @@ paths:
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
         "401":
           description: Not Authorized
+        "403":
+          description: Not Allowed
       security:
       - Keycloak: []
   /wms/outgoing-goods/confirmation:
@@ -125,10 +125,10 @@ paths:
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
         "401":
           description: Not Authorized
+        "403":
+          description: Not Allowed
       security:
       - Keycloak: []
   /wms/pick-confirmation:
@@ -145,10 +145,10 @@ paths:
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
         "401":
           description: Not Authorized
+        "403":
+          description: Not Allowed
       security:
       - Keycloak: []
   /wms/print:
@@ -165,10 +165,10 @@ paths:
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
         "401":
           description: Not Authorized
+        "403":
+          description: Not Allowed
       security:
       - Keycloak: []
   /wms/quantity-correction:
@@ -185,10 +185,10 @@ paths:
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
         "401":
           description: Not Authorized
+        "403":
+          description: Not Allowed
       security:
       - Keycloak: []
   /wms/stock-report:
@@ -205,10 +205,10 @@ paths:
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
         "401":
           description: Not Authorized
+        "403":
+          description: Not Allowed
       security:
       - Keycloak: []
 components:
@@ -369,8 +369,8 @@ components:
           type: integer
     WmsOutgoingGoodsMovementType:
       enum:
-      - Planned
-      - Unplanned
+      - OutgoingPlanned
+      - OutgoingUnplanned
       type: string
     WmsPickConfirmation:
       type: object
@@ -424,8 +424,8 @@ components:
           type: string
     WmsQuantityCorrectionMovementType:
       enum:
-      - Mengenkorrektur
-      - Inventurbuchung
+      - QuantityCorrection
+      - Stocktaking
       type: string
     WmsStockReport:
       type: object
