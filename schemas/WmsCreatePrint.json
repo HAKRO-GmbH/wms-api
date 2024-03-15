@@ -19,6 +19,9 @@
     "LabelType" : {
       "$ref" : "#/$defs/WmsLabelType"
     },
+    "LotNo" : {
+      "type" : "string"
+    },
     "OrderNo" : {
       "type" : "string"
     },

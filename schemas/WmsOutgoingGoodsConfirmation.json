@@ -19,6 +19,9 @@
     "MovementType" : {
       "$ref" : "#/$defs/WmsOutgoingGoodsMovementType"
     },
+    "OrderNo" : {
+      "type" : "string"
+    },
     "OutgoingGoodsNo" : {
       "type" : "string"
     },
