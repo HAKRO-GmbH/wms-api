@@ -45,14 +45,14 @@
     "Part" : {
       "type" : "integer"
     },
-    "Positions" : {
+    "RequestId" : {
+      "type" : "string"
+    },
+    "StockReportPosition" : {
       "type" : "array",
       "items" : {
         "$ref" : "#/$defs/WmsStockReportPosition"
       }
-    },
-    "RequestId" : {
-      "type" : "string"
     }
   },
   "additionalProperties" : false

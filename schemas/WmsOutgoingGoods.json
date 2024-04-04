@@ -49,7 +49,7 @@
     "OutgoingGoodsNo" : {
       "type" : "string"
     },
-    "OutgoingGoodsPositions" : {
+    "OutgoingGoodsPosition" : {
       "type" : "array",
       "items" : {
         "$ref" : "#/$defs/WmsOutgoingGoodsPosition"

@@ -58,14 +58,14 @@
     "IncomingGoodsNo" : {
       "type" : "string"
     },
-    "MovementType" : {
-      "$ref" : "#/$defs/WmsIncomingGoodsMovementType"
-    },
-    "Positions" : {
+    "IncomingGoodsPosition" : {
       "type" : "array",
       "items" : {
         "$ref" : "#/$defs/WmsIncomingGoodsPosition"
       }
+    },
+    "MovementType" : {
+      "$ref" : "#/$defs/WmsIncomingGoodsMovementType"
     },
     "SampleRequired" : {
       "type" : "boolean"

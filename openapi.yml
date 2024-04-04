@@ -11,7 +11,35 @@ info:
     name: Commercial License
   version: 0.1.0-SNAPSHOT
 paths:
-  /wms/cancel-request/response:
+  /wms/BufferZoneInformation:
+    post:
+      tags:
+      - Wms Client Resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WmsBufferZoneInformation'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
+  /wms/CancelRequest:
+    post:
+      tags:
+      - Wms Client Resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WmsCancelRequest'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
+  /wms/CancelRequestResponse:
     post:
       tags:
       - Cancel Request Response Resource
@@ -25,13 +53,7 @@ paths:
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
-        "401":
-          description: Not Authorized
-      security:
-      - Keycloak: []
-  /wms/carton-status:
+  /wms/CartonStatus:
     post:
       tags:
       - Carton Status Resource
@@ -45,113 +67,21 @@ paths:
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
-        "401":
-          description: Not Authorized
-      security:
-      - Keycloak: []
-  /wms/incoming-goods/confirmation:
+  /wms/CreateMaterialMaster:
     post:
       tags:
-      - Incoming Goods Confirmation Resource
+      - Wms Client Resource
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/WmsIncomingGoodsConfirmation'
+              $ref: '#/components/schemas/WmsCreateMaterialMaster'
       responses:
         "200":
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
-        "401":
-          description: Not Authorized
-      security:
-      - Keycloak: []
-  /wms/material/blocking-confirmation:
-    post:
-      tags:
-      - Material Resource
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/WmsMaterialBlockingConfirmation'
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json: {}
-        "403":
-          description: Not Allowed
-        "401":
-          description: Not Authorized
-      security:
-      - Keycloak: []
-  /wms/material/unblocking-confirmation:
-    post:
-      tags:
-      - Material Resource
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/WmsMaterialUnblockingConfirmation'
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json: {}
-        "403":
-          description: Not Allowed
-        "401":
-          description: Not Authorized
-      security:
-      - Keycloak: []
-  /wms/outgoing-goods/confirmation:
-    post:
-      tags:
-      - Outgoing Goods Confirmation Resource
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/WmsOutgoingGoodsConfirmation'
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json: {}
-        "403":
-          description: Not Allowed
-        "401":
-          description: Not Authorized
-      security:
-      - Keycloak: []
-  /wms/pick-confirmation:
-    post:
-      tags:
-      - Pick Confirmation Resource
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/WmsPickConfirmation'
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json: {}
-        "403":
-          description: Not Allowed
-        "401":
-          description: Not Authorized
-      security:
-      - Keycloak: []
-  /wms/print:
+  /wms/CreatePrint:
     post:
       tags:
       - Print Resource
@@ -165,13 +95,161 @@ paths:
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
-        "401":
-          description: Not Authorized
-      security:
-      - Keycloak: []
-  /wms/quantity-correction:
+  /wms/DeleteMaterialMaster:
+    post:
+      tags:
+      - Wms Client Resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WmsDeleteMaterialMaster'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
+  /wms/EndIncomingGoods:
+    post:
+      tags:
+      - Wms Client Resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WmsEndIncomingGoods'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
+  /wms/IncomingGoods:
+    post:
+      tags:
+      - Wms Client Resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WmsIncomingGoods'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
+  /wms/IncomingGoodsConfirmation:
+    post:
+      tags:
+      - Incoming Goods Confirmation Resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WmsIncomingGoodsConfirmation'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
+  /wms/MaterialBlocking:
+    post:
+      tags:
+      - Wms Client Resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WmsMaterialBlocking'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
+  /wms/MaterialBlockingConfirmation:
+    post:
+      tags:
+      - Material Blocking Resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WmsMaterialBlockingConfirmation'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
+  /wms/MaterialUnblocking:
+    post:
+      tags:
+      - Wms Client Resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WmsMaterialUnblocking'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
+  /wms/MaterialUnblockingConfirmation:
+    post:
+      tags:
+      - Material Unblocking Resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WmsMaterialUnblockingConfirmation'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
+  /wms/OutgoingGoods:
+    post:
+      tags:
+      - Wms Client Resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WmsOutgoingGoods'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
+  /wms/OutgoingGoodsConfirmation:
+    post:
+      tags:
+      - Outgoing Goods Confirmation Resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WmsOutgoingGoodsConfirmation'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
+  /wms/PickConfirmation:
+    post:
+      tags:
+      - Pick Confirmation Resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WmsPickConfirmation'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
+  /wms/QuantityCorrection:
     post:
       tags:
       - Quantity Correction Resource
@@ -185,13 +263,7 @@ paths:
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
-        "401":
-          description: Not Authorized
-      security:
-      - Keycloak: []
-  /wms/stock-report:
+  /wms/StockReport:
     post:
       tags:
       - Stock Report Resource
@@ -205,18 +277,41 @@ paths:
           description: OK
           content:
             application/json: {}
-        "403":
-          description: Not Allowed
-        "401":
-          description: Not Authorized
-      security:
-      - Keycloak: []
+  /wms/StockRequest:
+    post:
+      tags:
+      - Wms Client Resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WmsStockRequest'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
 components:
   schemas:
     OffsetDateTime:
       format: date-time
       type: string
       example: 2022-03-10T12:15:50-04:00
+    WmsBufferZoneInformation:
+      type: object
+      properties:
+        ArticleNo:
+          type: string
+        Quantity:
+          format: int64
+          type: integer
+        Location:
+          type: string
+    WmsCancelRequest:
+      type: object
+      properties:
+        OutgoingGoodsNo:
+          type: string
     WmsCancelRequestResponse:
       type: object
       properties:
@@ -259,6 +354,32 @@ components:
       - K1
       - K2
       type: string
+    WmsCreateMaterialMaster:
+      type: object
+      properties:
+        ArticleNo:
+          type: string
+        Model:
+          type: string
+        Color:
+          type: string
+        Size:
+          type: string
+        Description:
+          type: string
+        IsLotNoRequired:
+          type: boolean
+        Weight:
+          format: int32
+          type: integer
+        ImageFileNameArticle:
+          type: string
+        AbcArea:
+          type: string
+        IsManualSorting:
+          type: boolean
+        PreferredStorageArea:
+          type: string
     WmsCreatePrint:
       type: object
       properties:
@@ -280,6 +401,48 @@ components:
           type: string
         OrderNo:
           type: string
+        LotNo:
+          type: string
+    WmsDeleteMaterialMaster:
+      type: object
+      properties:
+        ArticleNo:
+          type: string
+    WmsDispositionType:
+      enum:
+      - Manual
+      - Automatic
+      type: string
+    WmsEndIncomingGoods:
+      type: object
+      properties:
+        IncomingGoodsNo:
+          type: string
+    WmsIncomingGoods:
+      type: object
+      properties:
+        StorageArea:
+          type: string
+        IncomingGoodsNo:
+          type: string
+        MovementType:
+          $ref: '#/components/schemas/WmsIncomingGoodsMovementType'
+        SortOrderNo:
+          type: boolean
+        SortModel:
+          type: boolean
+        SortColor:
+          type: boolean
+        SortSize:
+          type: boolean
+        SampleRequired:
+          type: boolean
+        HasPositions:
+          type: boolean
+        IncomingGoodsPosition:
+          type: array
+          items:
+            $ref: '#/components/schemas/WmsIncomingGoodsPosition'
     WmsIncomingGoodsConfirmation:
       type: object
       properties:
@@ -309,6 +472,36 @@ components:
       - IncomingPlanned
       - IncomingUnplanned
       type: string
+    WmsIncomingGoodsPosition:
+      type: object
+      properties:
+        StorageArea:
+          type: string
+        PositionNo:
+          type: string
+        ArticleNo:
+          type: string
+        LotNo:
+          type: string
+        SpecialStockIndicator:
+          type: string
+        SpecialStockNo:
+          type: string
+        TargetQty:
+          format: int64
+          type: integer
+        OrderNo:
+          type: string
+        SortOrderNo:
+          type: boolean
+        SortModel:
+          type: boolean
+        SortColor:
+          type: boolean
+        SortSize:
+          type: boolean
+        SampleRequired:
+          type: boolean
     WmsLabelType:
       enum:
       - TransportCarton
@@ -317,6 +510,21 @@ components:
       - QsLabel
       - ConsumableLabel
       type: string
+    WmsMaterialBlocking:
+      type: object
+      properties:
+        ArticleNo:
+          type: string
+        LotNo:
+          type: string
+        OrderNo:
+          type: string
+        SpecialStockIndicator:
+          type: string
+        SpecialStockNo:
+          type: string
+        LockStatusErp:
+          type: string
     WmsMaterialBlockingConfirmation:
       type: object
       properties:
@@ -332,6 +540,19 @@ components:
           type: string
         IsBlocked:
           type: boolean
+    WmsMaterialUnblocking:
+      type: object
+      properties:
+        ArticleNo:
+          type: string
+        LotNo:
+          type: string
+        OrderNo:
+          type: string
+        SpecialStockIndicator:
+          type: string
+        SpecialStockNo:
+          type: string
     WmsMaterialUnblockingConfirmation:
       type: object
       properties:
@@ -347,6 +568,24 @@ components:
           type: string
         IsUnblocked:
           type: boolean
+    WmsOutgoingGoods:
+      type: object
+      properties:
+        Location:
+          type: string
+        OutgoingGoodsNo:
+          type: string
+        DispositionType:
+          $ref: '#/components/schemas/WmsDispositionType'
+        Priority:
+          format: int32
+          type: integer
+        PriorityDate:
+          $ref: '#/components/schemas/OffsetDateTime'
+        OutgoingGoodsPosition:
+          type: array
+          items:
+            $ref: '#/components/schemas/WmsOutgoingGoodsPosition'
     WmsOutgoingGoodsConfirmation:
       type: object
       properties:
@@ -374,6 +613,28 @@ components:
       - OutgoingPlanned
       - OutgoingUnplanned
       type: string
+    WmsOutgoingGoodsPosition:
+      type: object
+      properties:
+        OutgoingGoodsNo:
+          type: string
+        PositionNo:
+          type: string
+        ArticleNo:
+          type: string
+        LotNo:
+          type: string
+        OrderNo:
+          type: string
+        SpecialStockIndicator:
+          type: string
+        SpecialStockNo:
+          type: string
+        TargetQty:
+          format: int64
+          type: integer
+        ExactQty:
+          type: boolean
     WmsPickConfirmation:
       type: object
       properties:
@@ -388,6 +649,8 @@ components:
         ArticleNo:
           type: string
         LotNo:
+          type: string
+        OrderNo:
           type: string
         SpecialStockIndicator:
           type: string
@@ -439,7 +702,7 @@ components:
           type: integer
         LastResponse:
           type: boolean
-        Positions:
+        StockReportPosition:
           type: array
           items:
             $ref: '#/components/schemas/WmsStockReportPosition'
@@ -469,8 +732,22 @@ components:
         LockedQuantity:
           format: int64
           type: integer
-  securitySchemes:
-    Keycloak:
-      type: openIdConnect
-      description: Authentication
-      openIdConnectUrl: https://auth.digital.hakro.com/realms/hakro-portal/.well-known/openid-configuration
+    WmsStockRequest:
+      type: object
+      properties:
+        RequestId:
+          type: string
+        IncomingGoodsNo:
+          type: string
+        ArticleNo:
+          type: string
+        LotNo:
+          type: string
+        OrderNo:
+          type: string
+        SpecialStockIndicator:
+          type: string
+        SpecialStockNo:
+          type: string
+        CartonNo:
+          type: string
