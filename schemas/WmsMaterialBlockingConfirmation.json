@@ -7,6 +7,12 @@
     "IsBlocked" : {
       "type" : "boolean"
     },
+    "LockStatusBusiness" : {
+      "type" : "string"
+    },
+    "LockStatusErp" : {
+      "type" : "string"
+    },
     "LotNo" : {
       "type" : "string"
     },

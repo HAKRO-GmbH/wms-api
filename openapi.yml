@@ -525,6 +525,8 @@ components:
           type: string
         LockStatusErp:
           type: string
+        LockStatusBusiness:
+          type: string
     WmsMaterialBlockingConfirmation:
       type: object
       properties:
@@ -537,6 +539,10 @@ components:
         SpecialStockIndicator:
           type: string
         SpecialStockNo:
+          type: string
+        LockStatusErp:
+          type: string
+        LockStatusBusiness:
           type: string
         IsBlocked:
           type: boolean

@@ -4,6 +4,9 @@
     "ArticleNo" : {
       "type" : "string"
     },
+    "LockStatusBusiness" : {
+      "type" : "string"
+    },
     "LockStatusErp" : {
       "type" : "string"
     },

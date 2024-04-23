@@ -785,6 +785,9 @@
           },
           "LockStatusErp" : {
             "type" : "string"
+          },
+          "LockStatusBusiness" : {
+            "type" : "string"
           }
         }
       },
@@ -804,6 +807,12 @@
             "type" : "string"
           },
           "SpecialStockNo" : {
+            "type" : "string"
+          },
+          "LockStatusErp" : {
+            "type" : "string"
+          },
+          "LockStatusBusiness" : {
             "type" : "string"
           },
           "IsBlocked" : {
